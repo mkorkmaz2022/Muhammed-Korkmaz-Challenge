@@ -16,7 +16,7 @@ export const changePrice = (packageId: string, listHeroId: string, newPriceInSui
   // Use tx.pure.u64() for the new price
   // Convert price from SUI to MIST before sending
   tx.moveCall({
-    target: `${packageId}::admin::change_price`,
+    target: `${packageId}::marketplace::change_the_price`,
     arguments: [tx.object(listHeroId), tx.object(adminCapId), tx.pure.u64(newPriceInMist)]
   });
 

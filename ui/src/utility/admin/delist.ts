@@ -15,7 +15,7 @@ export const delist = (
   // This requires admin capability verification
   // Returns the hero to the original seller
   tx.moveCall({
-    target: `${packageId}::admin::delist`,
+    target: `${packageId}::marketplace::delist`,
     arguments: [tx.object(adminCapId), tx.object(listHeroId)]
   });
 
